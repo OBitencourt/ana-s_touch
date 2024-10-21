@@ -1,11 +1,11 @@
 
-import { Caixa } from "@/src/styled"
+
 
 const Index = () => {
 
     return (
         <>
-            <Caixa/>
+            
         </>
     )
 }

@@ -15,8 +15,8 @@ export default function MyApp(props: AppProps) {
     return (
         <React.Fragment>
             <Head>
-                <title>Ana's Touch</title>
-                <link rel="icon" href="/images/barber-beauty-salon.ico" />
+                <title>{"Ana's Touch"}</title>
+                <link rel="icon" href="/images" />
                 <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
             </Head>
             <TemplateDefault>

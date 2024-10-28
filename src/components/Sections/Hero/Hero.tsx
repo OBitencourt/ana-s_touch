@@ -8,9 +8,9 @@ const Hero = () => {
 
     return (
         <>
+            <Header />  
             <HeroWrapper>
 
-                <Header />  
 
                 <Container
                     maxWidth='sm'

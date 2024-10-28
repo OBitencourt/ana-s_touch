@@ -1,6 +1,12 @@
 
 
-import { StyledButton, StyledHeader, StyledNav } from "./style"
+import {
+    ButtonWrapper,
+    LogoWrapper,
+    StyledButton,
+    StyledHeader,
+    StyledNav
+} from "./style"
 import Image from "next/image"
 
 const Header = () => {
@@ -9,33 +15,49 @@ const Header = () => {
         <>
             <StyledHeader>
                 <StyledNav>
+
+                    <ButtonWrapper>
+                        
+                        <StyledButton>
+                            Home
+                        </StyledButton>
+                        <StyledButton>
+                            Sobre Mim
+                        </StyledButton>
+                        <StyledButton>
+                            Serviços
+                        </StyledButton>
+                    </ButtonWrapper>
                     
-                    <StyledButton>
-                        Home
-                    </StyledButton>
-                    <StyledButton>
-                        Sobre Mim
-                    </StyledButton>
-                    <StyledButton>
-                        Serviços
-                    </StyledButton>
 
-                    <Image 
-                        width={250}
-                        height={250}
-                        src='/images/logo-anastouch-semfundo.png'
-                        alt="logo"                   
-                    />
+                    <LogoWrapper>
 
-                    <StyledButton>
-                        Testemunhas
-                    </StyledButton>
-                    <StyledButton>
-                        Galeria
-                    </StyledButton>
-                    <StyledButton>
-                        Contatos
-                    </StyledButton>
+                        <Image 
+                            width={200}
+                            height={200}
+                            src='/images/logo-anastouch-semfundo.png'
+                            alt="logo"  
+                            style={{
+                                backgroundColor: 'white',
+                                borderRadius: '100px',
+                                
+                            }}                
+                        />
+                    </LogoWrapper>  
+
+                    <ButtonWrapper>
+
+                        <StyledButton>
+                            Testemunhas
+                        </StyledButton>
+                        <StyledButton>
+                            Galeria
+                        </StyledButton>
+                        <StyledButton>
+                            Contatos
+                        </StyledButton>
+                    </ButtonWrapper>
+
 
                 </StyledNav>
 

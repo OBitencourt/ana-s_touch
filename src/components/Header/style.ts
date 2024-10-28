@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`   
-    background-color: transparent;
+    background-color: white;
     display: flex;
     justify-content: center;
-    overflow-x: hidden; /* Evita scroll horizontal */
+    align-items: center;
+    overflow: visible;
     position: absolute;
-    top: 0;
+    top: -80px;
+    width: 100%;
+    
 `
 
 export const StyledNav = styled.nav`
@@ -14,14 +17,15 @@ export const StyledNav = styled.nav`
     max-width: 1200px; /* Limite máximo de largura */
     background-color: transparent;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 0 20px; /* Adiciona um pouco de espaço nas laterais */
+    
 `
 
 export const StyledButton = styled.button`
     width: 120px;
-    background-color: transparent;
+    background-color: white;
     padding: 15px;
     border: none;
     margin: 15px;
@@ -30,38 +34,44 @@ export const StyledButton = styled.button`
     align-items: center;
     justify-content: center;
     font-size: 16px;
-    border-radius: 0.5em;
+    border-radius: 0.2em;
     cursor: pointer;
     transition: all 250ms ease-in-out;
-    border-bottom: 1px solid rgba(222, 49, 99, 1);
+    border-bottom: 1px solid rgba(222, 49, 99, 0);
     position: relative;
     overflow: hidden;
     z-index: 1;
-
-    /* Define o fundo preenchido inicialmente */
-    background-image: linear-gradient(
-        to top, 
-        rgba(222, 49, 99, 1) 50%, 
-        transparent 50%
-    );
-    background-size: 100% 200%;
-    background-position: 0 0; /* Fundo completamente preenchido no início */
+    font-family: 'Josefin Sans';
+    
 
     &:hover {
-        color: white;
-        background-position: 0 100%; /* Esvazia o fundo de cima para baixo */
-        border-bottom: 1px solid rgba(222, 49, 99, 0.2);
-        box-shadow: 0px 0px 3px white;
-        transform: scale(1.1);
-    }
-
-    /* Para garantir que o texto fique acima da animação */
-    &:hover::before {
-        z-index: 2;
-    }
-
-    &:active {
-        background-color: #d6789f;
-        color: black;
-    }
+        border-bottom: 1px solid rgba(222, 49, 99, 1);  
+        filter: brightness(0.98);
+        transform: scale(1.15);
+        color: rgba(222, 49, 99, 1);
+    }   
 `
+
+export const ButtonWrapper = styled.div`
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    z-index: 2;
+    top: 45px;
+    display: flex;
+`
+
+
+export const LogoWrapper = styled.div`
+    position: relative;
+    width: 250px;
+    height: 200px;
+    top: 70px; /* Ajusta para que a logo ultrapasse o header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: white;
+    overflow: hidden;
+    z-index: 2; /* Garante que a logo fique acima do conteúdo */
+`;

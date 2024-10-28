@@ -53,12 +53,12 @@ export const StyledButton = styled.button`
     padding: 15px;
     cursor: pointer;
     border-radius: .7em;
-    color: rgba(222, 49, 99, 0.6);
+    color: rgba(222, 49, 99, 1);
     font-family: 'Josefin Sans';
     background-color: white;
 
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.1);
         filter: brightness(0.95);
     }
 `

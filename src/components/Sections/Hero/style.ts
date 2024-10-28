@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const HeroWrapper = styled.section`
     position: relative;
-    height: 100vh;
+    height: 97vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,8 +24,8 @@ export const HeroWrapper = styled.section`
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        filter: blur(2px); /* Ajuste a intensidade do blur */
-        filter: brightness(0.9);
+        filter: blur(2px) brightness(0.92); /* Ajuste a intensidade do blur */
+
         z-index: -3; /* Mantém o background atrás dos outros elementos */
     }
 `;
@@ -37,7 +37,7 @@ export const MainDiv = styled.div`
     justify-content: center;
     flex-direction: column;
     border-radius: .75em;
-    margin-top: 80px;
+    margin-top: 100px;
     padding: 20px;
     color: black;
     

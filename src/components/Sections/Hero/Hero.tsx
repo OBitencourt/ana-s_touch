@@ -24,8 +24,10 @@ const Hero = () => {
 
                         <Typography
                             variant="h3"
-                            fontSize={40}
-                            sx={{marginBottom: 3}}
+                            fontSize={110}
+                            align="center"
+                            sx={{marginBottom: 3, fontFamily: 'Rouge script, sans-serif', lineHeight: '70px', textShadow: '0px 0px 7px pink' }}
+                            
                         >
                             Sua beleza nas mãos certas.
                         </Typography>

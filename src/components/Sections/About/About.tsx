@@ -1,8 +1,6 @@
 import { Container, Grid, Typography } from "@mui/material"
 import { StyledPinkSection } from "../generalstyle"
 import { PhotoWrapper } from "./style"
-import { motion } from "framer-motion"
-import Image from "next/image"
 
 const About = () => {
 

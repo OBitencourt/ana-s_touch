@@ -6,15 +6,15 @@ export const StyledPinkSection = styled.section`
     background-color: rgba(222, 49, 99, 1);
     padding: 80px 0;
     position: relative;
-
+    z-index: 0;
 `;
 
 
 export const StyledWhiteSection = styled.section`
     width: 100%;
-    height: 100vh;
+    
     background-color: white;
-    padding: 100px 0 100px 0;
+    padding: 80px 0 80px 0;
     
 `
 

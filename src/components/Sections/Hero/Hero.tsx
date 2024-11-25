@@ -1,6 +1,7 @@
 import { Container, Typography } from "@mui/material"
 import Header from "../../Header/Header"
-import { HeroWrapper, MainDiv, StyledButton } from "./style"
+import { HeroWrapper, StyledButton } from "./style"
+import Image from "next/image"
 
 
 
@@ -8,39 +9,48 @@ const Hero = () => {
 
     return (
         <>
-            <Header />  
             <HeroWrapper>
-
+                <Header />
 
                 <Container
                     maxWidth='sm'
                     sx={{
-                        color: 'black',
+                          
+                        height: '100vh',
                         display: 'flex',
-                        justifyContent: 'center'
+                        flexDirection: 'column',
+                        alignItems: 'center'
+                        
                     }}
                 >
-                    <MainDiv>
+                    <Image 
+                        src='/images/lirio.png'
+                        width={230}
+                        height={230}
+                        alt="lily"
+                    />
+                    <Typography
+                        sx={{
+                            fontFamily: 'Playfair Display',
+                            
+                            mb: 4
+                        }}
+                        fontSize={60}
+                        align="center"
+                        color="#4A4A4A"
+                        lineHeight={1}
+                    >
+                        Sua beleza nas mãos certas.
+                    </Typography>
 
-                        <Typography
-                            variant="h3"
-                            fontSize={110}
-                            align="center"
-                            sx={{marginBottom: 3, fontFamily: 'Rouge script, sans-serif', lineHeight: '70px', textShadow: '0px 0px 7px pink' }}
-                            
-                        >
-                            Sua beleza nas mãos certas.
-                        </Typography>
-                        
-                        <StyledButton
-                            
-                        >
-                            Agende
-                        </StyledButton>
-                        
-                    </MainDiv>
+                    <StyledButton>
+                        Agende!
+                    </StyledButton>
                 </Container>
             </HeroWrapper>
+
+
+            
 
         </>
     )

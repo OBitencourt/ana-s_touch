@@ -3,13 +3,13 @@ import Hero from "@/src/components/Sections/Hero/Hero"
 import Services from "@/src/components/Sections/Services/Services"
 
 
-
 const Index = () => {
 
     return (
         <>  
             
             <Hero />
+            
             <About />
             <Services />
         </>

@@ -1,25 +1,23 @@
 
 
-import {
-    ButtonWrapper,
-    LogoWrapper,
-    StyledButton,
-    StyledHeader,
-    StyledNav
-} from "./style"
+import { StyledButton, StyledHeader, StyledNavbar } from "./style"
 import Image from "next/image"
 
 const Header = () => {
 
     return (
         <>
-            <StyledHeader>
-                <StyledNav>
-
-                    <ButtonWrapper>
-                        
+           
+                <StyledHeader>
+                        <Image 
+                            alt="logo"
+                            width={130}
+                            height={130}
+                            src='/images/logo.png'
+                        />
+                    <StyledNavbar>
                         <StyledButton>
-                            Home
+                            Ínicio
                         </StyledButton>
                         <StyledButton>
                             Sobre Mim
@@ -27,41 +25,16 @@ const Header = () => {
                         <StyledButton>
                             Serviços
                         </StyledButton>
-                    </ButtonWrapper>
-                    
-
-                    <LogoWrapper>
-
-                        <Image 
-                            width={200}
-                            height={200}
-                            src='/images/logo-anastouch-semfundo.png'
-                            alt="logo"  
-                            style={{
-                                backgroundColor: 'white',
-                                borderRadius: '100px',
-                                
-                            }}                
-                        />
-                    </LogoWrapper>  
-
-                    <ButtonWrapper>
-
                         <StyledButton>
-                            Testemunhas
-                        </StyledButton>
-                        <StyledButton>
-                            Galeria
+                            Galerias
                         </StyledButton>
                         <StyledButton>
                             Contatos
                         </StyledButton>
-                    </ButtonWrapper>
-
-
-                </StyledNav>
-
-            </StyledHeader>
+                        
+                    </StyledNavbar>
+                </StyledHeader>
+            
         </>
     )
 }

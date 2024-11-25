@@ -4,48 +4,19 @@ import styled from "styled-components";
 
 export const HeroWrapper = styled.section`
     position: relative;
-    height: 97vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white;
+    
 
     /* Estilos da imagem de fundo */
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('/images/foto-home-enhanced.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        filter: blur(2px) brightness(0.92); /* Ajuste a intensidade do blur */
 
-        z-index: -3; /* Mantém o background atrás dos outros elementos */
-    }
 `;
 
-export const MainDiv = styled.div`
-    height: 200px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: .75em;
-    margin-top: 100px;
-    padding: 20px;
-    color: black;
-    
-`
 
 export const StyledButton = styled.button`
-    width: 30%;
-    background-color: transparent;
+    width: 23%;
+    background-color: #F52773;
     border-radius: .1em;
     transition: all 200ms ease;
     margin: 0 auto;
@@ -53,12 +24,13 @@ export const StyledButton = styled.button`
     padding: 15px;
     cursor: pointer;
     border-radius: .7em;
-    color: rgba(222, 49, 99, 1);
+    color: white;
     font-family: 'Josefin Sans';
-    background-color: white;
+    
 
     &:hover {
         transform: scale(1.1);
-        filter: brightness(0.95);
+        filter: brightness(1.1);
+        color: white;
     }
 `

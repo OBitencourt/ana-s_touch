@@ -12,7 +12,7 @@ const About = () => {
                     
                     maxWidth='md'
                 >
-                    <Grid container spacing={7}>
+                    <Grid container spacing={10}>
 
                         <Grid item md={6}>
                             <PhotoWrapper>
@@ -24,14 +24,13 @@ const About = () => {
 
                             <Typography
                                 variant="h1"
-                                fontSize={55}
+                                fontSize={50}
                                 component="h2"
                                 fontWeight={300}
                                 sx={{
-                                    fontFamily: 'Rouge Script', 
+                                    fontFamily: 'Playfair Display', 
                                     display: 'block',
-                                    justifyContent: 'center',
-                                    padding: '2px',
+                                    paddingBottom: '2px',
                                     borderBottom: '2px solid white',
                                     color: 'white',
                                     marginBottom: '10px'

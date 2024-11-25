@@ -1,10 +1,46 @@
 import { Container, Grid, Typography } from "@mui/material";
 import { StyledWhiteSection } from "../generalstyle";
-import { StyledButton, StyledCard } from "./style";
+import { Info, StyledButton, StyledCard } from "./style";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
+
+interface Service {
+    default: string; // Caminho do SVG padrão
+    hover: string;   // Caminho do SVG ao passar o mouse
+    description: string; // Texto descritivo do serviço
+}
 
 const Services = () => {
+
+    const [hovered, setHovered] = useState<number | null>(null);
+
+    const handleMouseEnter = (serviceNumber: number) => setHovered(serviceNumber);
+    const handleMouseLeave = () => setHovered(null);
+
+    const services: Service[] = [
+        { 
+          default: '/images/unha_limpa_rosa.svg', 
+          hover: '/images/unha_limpa_branca.svg', 
+          description: 'Limpeza e cuidados com as unhas.'
+        },
+        { 
+          default: '/images/lixa_rosa.svg', 
+          hover: '/images/lixa_branca.svg', 
+          description: 'Lixamento profissional para acabamento perfeito.'
+        },
+        { 
+          default: '/images/polimento_rosa.svg', 
+          hover: '/images/polimento_branco.svg', 
+          description: 'Polimento para um brilho impecável.'
+        },
+        { 
+          default: '/images/verniz_rosa.svg', 
+          hover: '/images/verniz_branco.svg', 
+          description: 'Aplicação de verniz para proteção e estilo.'
+        },
+      ];
+    
     return (
         <>
             <StyledWhiteSection style={{ position: 'relative' }}>
@@ -28,12 +64,13 @@ const Services = () => {
                         >
                             <Typography
                                 variant="h2"
-                                fontSize={90}
+                                fontSize={80}
                                 align="center"
                                 lineHeight={0.8}
-                                sx={{ fontFamily: 'Rouge script', mb: 5 }}
+                                letterSpacing={-2}
+                                sx={{ fontFamily: 'Playfair Display', mb: 5 }}
                             >
-                                Meus <span style={{ color: 'rgba(222, 49, 99, 1)', fontSize: '120px' }}>Serviços</span>
+                                Meus <span style={{ color: 'rgba(222, 49, 99, 1)', fontSize: '90px' }}>Serviços</span>
                             </Typography>
 
                             <StyledButton>
@@ -42,18 +79,34 @@ const Services = () => {
                         </Grid>
 
                         <Grid container spacing={3} md={7}>
-                            <Grid item md={6}>
-                                <StyledCard></StyledCard>
-                            </Grid>
-                            <Grid item md={6}>
-                                <StyledCard></StyledCard>
-                            </Grid>
-                            <Grid item md={6}>
-                                <StyledCard></StyledCard>
-                            </Grid>
-                            <Grid item md={6}>
-                                <StyledCard></StyledCard>
-                            </Grid>
+                            {services.map((service, serviceNumber) => (
+                                <Grid item md={6} key={serviceNumber}>
+                                    <StyledCard
+                                        onMouseEnter={() => handleMouseEnter(serviceNumber)}
+                                        onMouseLeave={handleMouseLeave}
+                                    >
+                                        <Image
+                                            src={hovered === serviceNumber ? service.hover : service.default}
+                                            width={50}
+                                            height={50}
+                                            alt={`service-${serviceNumber}`}
+                                        />
+                                        <Info className="info">
+
+                                            <Typography 
+                                                variant="body1"
+                                                sx={{
+                                                    fontFamily: 'Josefin Sans'
+                                                }}
+                                                fontSize={20}
+                                                lineHeight={1}
+                                            >
+                                                {service.description}
+                                            </Typography>
+                                        </Info>
+                                    </StyledCard>
+                                </Grid>
+                            ))}
                         </Grid>
                     </Grid>
                 </Container>

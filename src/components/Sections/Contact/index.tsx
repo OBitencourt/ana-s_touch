@@ -2,9 +2,19 @@ import { Container, Grid, Typography } from "@mui/material"
 import { StyledWhiteSection } from "../generalstyle"
 import { ContactDiv, SocialInfo, SocialCard, Socials, StyledInput, StyledTextField } from "./style"
 import Image from "next/image"
+import { FormButton } from "./style"
+
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
+
 
 
 const Contact = () => {
+
+    const [state, handleSubmit] = useForm("xnnqbykk");
+    if (state.succeeded) {
+        return <p>Thanks for joining!</p>;
+    }
 
     return (
         <>
@@ -27,6 +37,7 @@ const Contact = () => {
                         <Grid item md={6}>
 
                             <ContactDiv>
+                                
                                 <Typography
                                     color="white"
                                     align="center"
@@ -37,25 +48,51 @@ const Contact = () => {
                                 >
                                     Marque já seu atendimento!
                                 </Typography>
-                                <StyledInput
-                                    placeholder="Nome"
-                                    id="name"
-                                    type="name" 
-                                    name="name"
-                                >
+                                <form onSubmit={handleSubmit}> 
 
-                                </StyledInput>
-                                <StyledInput
-                                    placeholder="E-mail"
-                                    id="email"
-                                    type="email" 
-                                    name="email"
-                                >
-                                    
-                                </StyledInput>
-                                <StyledTextField placeholder="Digite uma mensagem!">
+                                    <StyledInput
+                                        placeholder="Nome"
+                                        id="name"
+                                        type="name" 
+                                        name="name"
+                                    >
 
-                                </StyledTextField>
+                                    </StyledInput>
+                                    <ValidationError 
+                                        prefix="Name" 
+                                        field="name"
+                                        errors={state.errors}
+                                    />
+                                    <StyledInput
+                                        placeholder="E-mail"
+                                        id="email"
+                                        type="email" 
+                                        name="email"
+                                    >
+                                        
+                                    </StyledInput>
+                                    <ValidationError 
+                                        prefix="Email" 
+                                        field="email"
+                                        errors={state.errors}
+                                    />
+                                    <StyledTextField 
+                                        placeholder="Digite uma mensagem!"
+                                        id="message"
+                                        name="message"      
+                                    >
+
+                                    </StyledTextField>
+                                    <ValidationError 
+                                        prefix="Message" 
+                                        field="message"
+                                        errors={state.errors}
+                                    />
+
+                                    <FormButton type="submit" disabled={state.submitting}>
+                                        Contate!
+                                    </FormButton>
+                                </form>
                             </ContactDiv>
                             
                         </Grid>

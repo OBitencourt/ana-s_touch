@@ -56,3 +56,23 @@ export const SocialInfo = styled.div`
     justify-content: center;
     margin-left: 20px;
 `
+
+export const FormButton = styled.button`
+    padding: 15px 30px;
+    background-color: white;
+    color: #E12773;
+    border: none;
+    font-weight: 500;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 10px;
+    transition: all 200ms ease;
+    font-family: 'Josefin Sans';
+
+
+    &:hover {
+        transform: scale(1.05);
+        filter: brightness(0.93);
+    }
+`

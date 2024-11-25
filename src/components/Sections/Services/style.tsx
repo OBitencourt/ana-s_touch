@@ -17,6 +17,7 @@ export const StyledCard = styled.div`
 
     &:hover .info {
         color: white;
+        border-top: 1px solid white;
     }
 
 `
@@ -28,9 +29,7 @@ export const Info = styled.div`
     border-top: 1px solid #E12773;
     padding-top: 20px;
 
-    &:hover {
-        border-top: 1px solid white;
-    }
+
 
 `
 

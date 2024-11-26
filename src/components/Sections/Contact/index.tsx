@@ -7,14 +7,24 @@ import { FormButton } from "./style"
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
-
+import useToasty from '../../../contexts/Toasty'
 
 const Contact = () => {
+    const { setToasty } = useToasty()
 
-    const [state, handleSubmit] = useForm("xnnqbykk");
+    const [state, handleSubmit] = useForm("mqakdvrj");
     if (state.succeeded) {
-        return <p>Thanks for joining!</p>;
+
+        setToasty({
+            open: true,
+            text: 'Mensagem enviada com sucesso!',
+            severity: 'success'
+        })
+        
+        window.location.reload()
     }
+
+
 
     return (
         <>

@@ -7,6 +7,10 @@ import theme from '../src/theme';
 import { AppProps } from 'next/app';
 import TemplateDefault from '../src/templates/Default';
 
+import { ToastyProvider } from '../src/contexts/Toasty';
+
+
+
 // Definindo os estilos globais diretamente aqui
 const GlobalStyle = createGlobalStyle`
   body {
@@ -31,9 +35,12 @@ export default function MyApp(props: AppProps) {
             <ThemeProvider theme={theme}>
                 <CssBaseline />
                 <GlobalStyle /> {/* GlobalStyle definido diretamente aqui */}
-                <TemplateDefault>
-                    <Component {...pageProps} />
-                </TemplateDefault>
+                <ToastyProvider>
+
+                    <TemplateDefault>
+                        <Component {...pageProps} />
+                    </TemplateDefault>
+                </ToastyProvider>
             </ThemeProvider>
         </React.Fragment>
     );

@@ -21,7 +21,6 @@ const Contact = () => {
             severity: 'success'
         })
         
-        window.location.reload()
     }
 
 

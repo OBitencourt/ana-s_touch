@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const StyledPinkSection = styled.section`
     width: 100%;
     height: 110vh;
-    background-color: rgba(222, 49, 99, 1);
-    padding: 80px 0;
+    background-color: #C91F63;
+    padding: 60px 0;
     position: relative;
     z-index: 0;
 `;

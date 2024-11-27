@@ -154,7 +154,7 @@ const Services = () => {
                 whileInView={{ 
                     opacity: 1, 
                     y: '1000px',
-                    x: 20,
+                    x: 50,
                     rotate: -100
                 }} 
                 viewport={{ once: false, amount: 0}} 

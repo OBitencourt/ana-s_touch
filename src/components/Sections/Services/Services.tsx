@@ -47,10 +47,11 @@ const Services = () => {
                 <Container
                     maxWidth='lg'
                     sx={{
-                        position: 'relative'
+                        position: 'relative',
+                        width: '90%'
                     }}
                 >
-                    <Grid container spacing={3}>
+                    <Grid container spacing={1}>
                         <Grid
                             item
                             md={5}
@@ -78,7 +79,7 @@ const Services = () => {
                             </StyledButton>
                         </Grid>
 
-                        <Grid container spacing={3} md={7}>
+                        <Grid container spacing={1} md={7}>
                             {services.map((service, serviceNumber) => (
                                 <Grid item md={6} key={serviceNumber}>
                                     <StyledCard
@@ -87,8 +88,8 @@ const Services = () => {
                                     >
                                         <Image
                                             src={hovered === serviceNumber ? service.hover : service.default}
-                                            width={50}
-                                            height={50}
+                                            width={40}
+                                            height={40}
                                             alt={`service-${serviceNumber}`}
                                         />
                                         <Info className="info">
@@ -98,7 +99,7 @@ const Services = () => {
                                                 sx={{
                                                     fontFamily: 'Josefin Sans'
                                                 }}
-                                                fontSize={20}
+                                                fontSize={14}
                                                 lineHeight={1}
                                             >
                                                 {service.description}
@@ -131,8 +132,8 @@ const Services = () => {
                     }}
                 >
                     <Image
-                        width={300}
-                        height={300}
+                        width={250}
+                        height={250}
                         src='/images/esmalte-red.png'
                         alt="logo"
                         style={{
@@ -147,14 +148,14 @@ const Services = () => {
             <motion.div
                 initial={{ 
                     opacity: 0, 
-                    y: '1200px', 
+                    y: '1000px', 
                     x: 20,
                     rotate: -130
                 }}
                 whileInView={{ 
                     opacity: 1, 
-                    y: '1000px',
-                    x: 50,
+                    y: '900px',
+                    x: 30,
                     rotate: -100
                 }} 
                 viewport={{ once: false, amount: 0}} 
@@ -164,12 +165,12 @@ const Services = () => {
                     top: '0',
                     right: '-100px',
                     borderRadius: '100px',
-                        
+                    zIndex: 0
                 }}
             >
                 <Image
-                    width={400}
-                    height={400}
+                    width={300}
+                    height={300}
                     src='/images/tools.png'
                     alt="logo"
                     style={{

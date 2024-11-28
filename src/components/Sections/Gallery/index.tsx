@@ -29,7 +29,7 @@ const responsive = {
 const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
     const { carouselState: { currentSlide } } = rest;
     return (
-      <div style={{position: 'absolute', display: 'flex', justifyContent: 'space-between', width: '100%', padding: '10px'}} className="carousel-button-group"> 
+      <div style={{position: 'absolute', display: 'flex', justifyContent: 'space-between', width: '100%', padding: '20px'}} className="carousel-button-group"> 
         <StyledArrow className={currentSlide === 0 ? 'disable' : ''} onClick={() => previous()}>
             <Image 
                 src='/images/left-arrow.svg'

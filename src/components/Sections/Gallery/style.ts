@@ -12,13 +12,16 @@ export const StyledArrow = styled.button`
 
     &:hover {
         transform: scale(1.05);
-        filter: brightness(0.9);
+        
     }
 `
 
 export const Card = styled.div`
-    padding: 10px;
+    padding: 4px;
     background-color: white;
-    border-radius: 7px;
+    border-radius: 4px;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `

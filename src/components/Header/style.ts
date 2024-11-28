@@ -6,7 +6,7 @@ export const StyledHeader = styled.header`
     position: relative;
     
     border-radius: 20px;
-    padding: 0 20px 0 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,15 +24,15 @@ export const StyledButton = styled.button`
     font-family: 'Josefin Sans';
     color: #4A4A4A;
     border: none;
-    border-radius: 7px;
-    padding: 7px 20px;
+    border-radius: 54px;
     font-size: 14px;
     background-color: transparent;
     transition: all 250ms ease-in;
     cursor: pointer;
     z-index: 1;
     height: 50px;
-    
+    width: 110px;
+    margin-right: 3px;
     &:hover {
         background-color: #F52773;
         color: white;

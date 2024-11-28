@@ -11,9 +11,9 @@ const Header = () => {
                 <StyledHeader>
                         <Image 
                             alt="logo"
-                            width={130}
-                            height={130}
-                            src='/images/logo.png'
+                            width={90}
+                            height={60}
+                            src='/images/logo-icon.png'
                         />
                     <StyledNavbar>
                         <StyledButton>

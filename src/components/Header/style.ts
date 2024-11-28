@@ -17,7 +17,7 @@ export const StyledNavbar = styled.nav`
     width: 50%;
     display: flex;
     justify-content: space-around;
-    z-index: 0;
+    
 `
 
 export const StyledButton = styled.button`
@@ -25,18 +25,19 @@ export const StyledButton = styled.button`
     color: #4A4A4A;
     border: none;
     border-radius: 54px;
-    font-size: 14px;
+    font-size: 12px;
     background-color: transparent;
     transition: all 250ms ease-in;
     cursor: pointer;
     z-index: 1;
-    height: 50px;
-    width: 110px;
-    margin-right: 3px;
+    padding: 12px 0px;
+    width: 105px;
+    margin-right: 8px;
     &:hover {
         background-color: #F52773;
         color: white;
     }
+    
 `
 
 export const LogoWrapper = styled.div`

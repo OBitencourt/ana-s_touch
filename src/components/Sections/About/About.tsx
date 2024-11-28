@@ -7,14 +7,14 @@ const About = () => {
     <>
       <StyledPinkSection>
         <Container maxWidth="lg" >
-          <Grid container spacing={3}>
+          <Grid container spacing={3} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             {/* SVG da unha */}
             <Grid item md={6}>
               <PhotoWrapper>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 20 200 400"
-                  style={{ width: "500px", height: "auto", position: 'absolute', top: 0}}
+                  style={{ width: "430px", height: "auto", position: 'absolute', top: 0}}
                 >
                   <path
                     d="
@@ -34,7 +34,7 @@ const About = () => {
             <Grid item md={5}>
               <Typography
                 variant="h1"
-                fontSize={40}
+                fontSize={35}
                 component="h2"
                 fontWeight={300}
                 sx={{
@@ -53,12 +53,12 @@ const About = () => {
                 variant="body1"
                 component="p"
                 fontWeight={300}
-                fontSize={16}
+                fontSize={14}
                 sx={{
                   fontFamily: "Josefin Sans",
                   justifyContent: "center",
                   color: "white",
-                  mt: 3
+                  mt: 2
                 }}
               >
                 Olá! Meu nome é Ana e sou apaixonada por cuidado, beleza e autoestima. Trabalho como manicure, ajudando as pessoas a se sentirem mais confiantes e bem consigo mesmas.

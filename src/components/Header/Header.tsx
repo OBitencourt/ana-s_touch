@@ -13,8 +13,8 @@ const Header = () => {
                 <StyledHeader>
                      <Image 
                         alt="logo"
-                        width={80}
-                        height={50}
+                        width={70}
+                        height={40}
                         src='/images/logo-icon.png'
                     />
                     <StyledNavbar>

@@ -24,18 +24,20 @@ export const StyledButton = styled.button`
     font-family: 'Josefin Sans';
     color: #4A4A4A;
     border: none;
-    border-radius: 54px;
+    border-radius: 8px;
     font-size: 12px;
     background-color: transparent;
-    transition: all 250ms ease-in;
+    transition: all 200ms ease-in;
     cursor: pointer;
     z-index: 1;
-    padding: 12px 0px;
+    padding: 10px 0px;
     width: 105px;
     margin-right: 8px;
+    border: 1px solid transparent;
     &:hover {
-        background-color: #F52773;
-        color: white;
+        border: 1px solid #F52773;
+        background-color: white;
+        color: #F52773;
     }
     
 `

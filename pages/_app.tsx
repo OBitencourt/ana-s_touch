@@ -30,7 +30,7 @@ export default function MyApp(props: AppProps) {
                 <title>{"Ana's Touch"}</title>
                 <link rel="icon" href="/images" />
                 <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-                <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rouge+Script&display=swap" rel="stylesheet" />
+                <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Judson:ital,wght@0,400;0,700;1,400&family=Rouge+Script&display=swap" rel="stylesheet" />
             </Head>
             <ThemeProvider theme={theme}>
                 <CssBaseline />

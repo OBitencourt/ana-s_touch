@@ -2,6 +2,7 @@ import { Container, Grid, Typography } from "@mui/material"
 import Header from "../../Header/Header"
 import { HeroWrapper, PhotoDiv, StyledButton } from "./style"
 import Image from "next/image"
+import { motion } from "framer-motion";
 
 
 
@@ -21,7 +22,8 @@ const Hero = () => {
                         flexDirection: 'column',
                         justifyContent: 'center',
                         marginLeft: '20px',
-                        alignItems: 'center'
+                        margin: '0 auto',
+                        width: '95%'
                     }}
                 >
 
@@ -53,13 +55,14 @@ const Hero = () => {
                             <Typography
                                 
                                 sx={{
-                                    fontFamily: 'Playfair Display'
+                                    fontFamily: 'Judson',
+                                    width: '80%'
 
                                 }}
                                 
                                 color="#4A4A4A"
                                 variant="body1"
-                                fontSize={15}
+                                fontSize="12px"
                                 
                             >
                                 Com técnica, carinho e atenção, meu trabalho vai além da estética, proporcionando a você um momento de bem-estar e confiança. Cada atendimento é pensado para realçar sua beleza e refletir sua personalidade de forma única.
@@ -68,10 +71,34 @@ const Hero = () => {
                                 Agende!
                             </StyledButton>
                         </Grid>
-                        <Grid item md={6}>
-                                <PhotoDiv>
-
-                                </PhotoDiv>
+                        <Grid item md={6} sx={{overflow: 'visible'}}>
+                            <PhotoDiv>
+                                
+                            </PhotoDiv>
+                            <motion.div
+                                initial={{ opacity: 0, y: -20, x: 1000 }}
+                                whileInView={{ 
+                                    opacity: 1, 
+                                    y: -20,
+                                    x: 750,
+                                    rotate: 0
+                                }} // Ativa a animação quando o elemento está em viewport
+                                viewport={{ once: false, amount: 0 }} // 
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                style={{
+                                    position: 'absolute',
+                                    bottom: '0',
+                                    left: '-10px',
+                                    borderRadius: '8px',
+                                    overflow: 'hidden',
+                                    backgroundColor: '#E12773',
+                                    height: '200px',
+                                    width: '200px'
+                                }}
+                            >
+                                
+                                
+                            </motion.div>
                         </Grid>
                     </Grid>
                 </Container>

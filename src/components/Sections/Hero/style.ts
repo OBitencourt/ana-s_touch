@@ -26,7 +26,7 @@ export const StyledButton = styled.button`
     border-radius: 6px;
     color: white;
     font-family: 'Josefin Sans';
-    
+    font-size: 12px;
 
     &:hover {
         background-color: #C91F63;
@@ -36,10 +36,21 @@ export const StyledButton = styled.button`
 
 export const PhotoDiv = styled.div`
     width: 90%;
-    height: 350px;
-    background-image: url('/images/foto-home.png');
+    height: 320px;
+    background-image: url('/images/unhas-foto-enhanced.png');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 8px;
-    box-shadow: -4px 0px 0px #F52773;
-`
+    position: relative; /* Necessário para o ::before funcionar */
+
+    
+`;
+
+
+export const Quadrado = styled.div`
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    background-color: blue;
+
+`;

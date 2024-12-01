@@ -8,7 +8,7 @@ const Header = () => {
 
     return (
         <>
-            <Container maxWidth='lg'>
+            <Container maxWidth='lg' >
 
                 <StyledHeader>
                      <Image 

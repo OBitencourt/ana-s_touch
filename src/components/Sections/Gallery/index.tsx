@@ -59,6 +59,7 @@ const Gallery = () => {
             <StyledPinkSection>
                 <Container
                     maxWidth='lg'
+                    
                 >
                     <Typography
                         sx={{
@@ -80,6 +81,7 @@ const Gallery = () => {
                         infinite={true}
                         autoPlay={true}
                         autoPlaySpeed={5000}
+                        
                     >
                         <Card>
 
@@ -87,7 +89,8 @@ const Gallery = () => {
                                 src='https://picsum.photos/1000/1000'
                                 alt="photo"
                                 height={220}
-                                width={350}
+                                width={390}
+                                style={{borderRadius: '2px'}}
                             />
                         </Card>
                         <Card>
@@ -95,7 +98,8 @@ const Gallery = () => {
                                 src='https://picsum.photos/1000/1000'
                                 alt="photo"
                                 height={220}
-                                width={350}
+                                width={390}
+                                style={{borderRadius: '2px'}}
                             />
                         </Card>
                         <Card>
@@ -103,7 +107,8 @@ const Gallery = () => {
                                 src='https://picsum.photos/1000/1000'
                                 alt="photo"
                                 height={220}
-                                width={350}
+                                width={390}
+                                style={{borderRadius: '2px'}}
                             />
                         </Card>
                         <Card>
@@ -111,7 +116,8 @@ const Gallery = () => {
                                 src='https://picsum.photos/1000/1000'
                                 alt="photo"
                                 height={220}
-                                width={350}
+                                width={390}
+                                style={{borderRadius: '2px'}}
                             />
                         </Card>
                     </Carousel>;

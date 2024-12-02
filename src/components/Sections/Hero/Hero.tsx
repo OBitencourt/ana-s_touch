@@ -23,18 +23,20 @@ const Hero = () => {
                         justifyContent: 'center',
                         marginLeft: '20px',
                         margin: '0 auto',
-                        width: '95%'
+                        width: '95%',
+                        paddingBottom: 3
                     }}
                 >
 
-                    <Grid container spacing={3}>
-                        <Grid item md={6}>
+                    <Grid container spacing={2}>
+                        <Grid item md={6} >
 
                             <Image 
                                 src='/images/text-logo.png'
                                 width={300}
-                                height={100}
+                                height={90}
                                 alt="lily"
+                                style={{marginTop: 20}}
                             />
 
                             <Typography
@@ -80,7 +82,7 @@ const Hero = () => {
                                 whileInView={{ 
                                     opacity: 1, 
                                     y: -20,
-                                    x: 750,
+                                    x: 800,
                                     rotate: 0
                                 }} // Ativa a animação quando o elemento está em viewport
                                 viewport={{ once: false, amount: 0 }} // 
@@ -92,8 +94,8 @@ const Hero = () => {
                                     borderRadius: '8px',
                                     overflow: 'hidden',
                                     backgroundColor: '#E12773',
-                                    height: '200px',
-                                    width: '200px'
+                                    height: '170px',
+                                    width: '190px'
                                 }}
                             >
                                 

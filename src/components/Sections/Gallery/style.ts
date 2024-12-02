@@ -17,6 +17,7 @@ export const StyledArrow = styled.button`
 `
 
 export const Card = styled.div`
+    width: 99%;
     padding: 4px;
     background-color: white;
     border-radius: 4px;

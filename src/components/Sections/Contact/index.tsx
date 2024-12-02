@@ -12,7 +12,7 @@ import useToasty from '../../../contexts/Toasty'
 const Contact = () => {
     const { setToasty } = useToasty()
 
-    const [state, handleSubmit] = useForm("mqakdvrj");
+    const [state, handleSubmit] = useForm("xnnqbykk");
     if (state.succeeded) {
 
         setToasty({
@@ -33,7 +33,10 @@ const Contact = () => {
                 >
                     <Typography
                         sx={{
-                            fontFamily: 'Playfair Display'
+                            fontFamily: 'Playfair Display',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center'
                         }}
                         color="#E12773"
                         fontSize={60}
@@ -42,7 +45,7 @@ const Contact = () => {
                         Contate
                     </Typography>
                     
-                    <Grid sx={{mt: 1}} container spacing={3}>
+                    <Grid sx={{margin: '20px auto'}} container spacing={1} >
                         <Grid item md={6}>
 
                             <ContactDiv>
@@ -52,7 +55,7 @@ const Contact = () => {
                                     align="center"
                                     sx={{
                                         mb: 2,
-                                        fontFamily: 'Josefin Sans'
+                                        fontFamily: 'Judson'
                                     }}
                                 >
                                     Marque já seu atendimento!
@@ -112,8 +115,8 @@ const Contact = () => {
                                 <SocialCard>
                                     <Image 
                                         src='/images/email.svg'
-                                        width={55}
-                                        height={55}
+                                        width={50}
+                                        height={50}
                                         alt="email"
                                     />
                                     <SocialInfo>
@@ -141,8 +144,8 @@ const Contact = () => {
                                 <SocialCard>
                                     <Image 
                                         src='/images/instagram.svg'
-                                        width={55}
-                                        height={55}
+                                        width={50}
+                                        height={50}
                                         alt="instagram"
                                     />
                                     <SocialInfo>
@@ -170,8 +173,8 @@ const Contact = () => {
                                 <SocialCard>
                                     <Image 
                                         src='/images/whatsapp.svg'
-                                        width={55}
-                                        height={55}
+                                        width={50}
+                                        height={50}
                                         alt="email"
                                     />
                                     <SocialInfo>

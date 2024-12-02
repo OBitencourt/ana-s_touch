@@ -15,7 +15,7 @@ export const HeroWrapper = styled.section`
 
 
 export const StyledButton = styled.button`
-    width: 23%;
+    width: 20%;
     background-color: #F52773;
     border-radius: .1em;
     transition: all 300ms ease;
@@ -36,7 +36,7 @@ export const StyledButton = styled.button`
 
 export const PhotoDiv = styled.div`
     width: 90%;
-    height: 320px;
+    height: 350px;
     background-image: url('/images/unhas-foto-enhanced.png');
     background-repeat: no-repeat;
     background-size: cover;

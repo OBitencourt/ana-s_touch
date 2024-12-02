@@ -12,14 +12,19 @@ export const StyledCard = styled.div`
     z-index: 10;
 
     &:hover {
-        
+        transform: scale(1.05);
         background-color: #E12773;
+        z-index: 20;
     }
+
+    
 
     &:hover .info {
         color: white;
         border-top: 1px solid white;
+        
     }
+
 
 `
 

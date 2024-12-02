@@ -2,17 +2,17 @@ import styled from "styled-components";
 
 export const ContactDiv = styled.div`
     background-color: #E12773;
-    border-radius: 7px;
+    border-radius: 4px;
     padding: 20px;
 `
 
 export const StyledInput = styled.input`
-    width: 48%;
+    width: 47.5%;
     margin: 5px;
     height: 40px;
     padding: 5px 10px;
     border: none;
-    border-radius: 3.5px;
+    border-radius: 2px;
     outline: none;
 
     &:focus {
@@ -27,7 +27,7 @@ export const StyledTextField = styled.textarea`
     margin: 20px 0 0 5px;
     padding: 5px 10px;
     border: none;
-    border-radius: 3.5px;
+    border-radius: 2px;
     outline: none;
 
     &:focus {
@@ -58,17 +58,18 @@ export const SocialInfo = styled.div`
 `
 
 export const FormButton = styled.button`
-    padding: 15px 30px;
+    padding: 12px 16px;
     background-color: white;
     color: #E12773;
     border: none;
     font-weight: 500;
-    border-radius: 7px;
+    border-radius: 4px;
     cursor: pointer;
     margin-left: 5px;
     margin-top: 10px;
     transition: all 200ms ease;
     font-family: 'Josefin Sans';
+    font-size: 12px;
 
 
     &:hover {

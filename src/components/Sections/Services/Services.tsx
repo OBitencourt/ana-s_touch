@@ -3,41 +3,37 @@ import { StyledWhiteSection } from "../generalstyle";
 import { Info, StyledButton, StyledCard } from "./style";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 interface Service {
-    default: string; // Caminho do SVG padrão
-    hover: string;   // Caminho do SVG ao passar o mouse
-    description: string; // Texto descritivo do serviço
+    default: string; // Caminho do SVG padrão   
+    title: string; // Texto descritivo do serviço
+    description: string
 }
 
 const Services = () => {
 
-    const [hovered, setHovered] = useState<number | null>(null);
 
-    const handleMouseEnter = (serviceNumber: number) => setHovered(serviceNumber);
-    const handleMouseLeave = () => setHovered(null);
 
     const services: Service[] = [
         { 
-          default: '/images/unha_limpa_rosa.svg', 
-          hover: '/images/unha_limpa_branca.svg', 
-          description: 'Limpeza e cuidados com as unhas.'
+          default: '/images/nail-gelinho.svg', 
+          title: 'Gelinho',
+          description: 'O gelinho é ideal para quem busca unhas naturais e delicadas, oferecendo resistência extra e um acabamento perfeito.'
         },
         { 
-          default: '/images/lixa_rosa.svg', 
-          hover: '/images/lixa_branca.svg', 
-          description: 'Lixamento profissional para acabamento perfeito.'
+          default: '/images/nail-fibra.svg',
+          title: 'Unha em fibra',
+          description: 'Unhas em fibra são sinônimo de durabilidade e elegância, garantindo um alongamento natural e resistente para o dia a dia.'
         },
         { 
-          default: '/images/polimento_rosa.svg', 
-          hover: '/images/polimento_branco.svg', 
-          description: 'Polimento para um brilho impecável.'
+          default: '/images/nail-gel.svg',
+          title: 'Unha em gel',
+          description: 'As unhas em gel proporcionam um visual impecável, com brilho intenso e longa duração, perfeitas para quem busca praticidade e beleza.'
         },
         { 
-          default: '/images/verniz_rosa.svg', 
-          hover: '/images/verniz_branco.svg', 
-          description: 'Aplicação de verniz para proteção e estilo.'
+          default: '/images/nail-art.png',
+          title: 'Nail Art',
+          description: 'A nail art transforma suas unhas em verdadeiras obras de arte, permitindo criar designs únicos que refletem sua personalidade.'
         },
       ];
     
@@ -48,68 +44,80 @@ const Services = () => {
                     maxWidth='lg'
                     sx={{
                         position: 'relative',
-                        width: '90%'
+                        width: '90%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center'
                     }}
                 >
-                    <Grid container spacing={1}>
-                        <Grid
-                            item
-                            md={5}
-                            sx={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                padding: '50px'
-                            }}
-                        >
-                            <Typography
-                                variant="h2"
-                                fontSize={80}
-                                align="center"
-                                lineHeight={0.8}
-                                letterSpacing={-2}
-                                sx={{ fontFamily: 'Playfair Display', mb: 5 }}
-                            >
-                                Meus <span style={{ color: 'rgba(222, 49, 99, 1)', fontSize: '90px' }}>Serviços</span>
-                            </Typography>
+                    <Typography
+                        variant="h2"
+                        fontSize={80}
+                        align="center"
+                        lineHeight={0.8}
+                        letterSpacing={-2}
+                        sx={{ fontFamily: 'Playfair Display', mb: 10, width: '50%' }}
+                    >
+                        Meus <span style={{ color: 'rgba(222, 49, 99, 1)', fontSize: '90px' }}>Serviços</span>
+                    </Typography>
+                            
+                    
+                    
+                        
+                        
 
-                            <StyledButton>
-                                Agende!
-                            </StyledButton>
-                        </Grid>
+                    <Grid container spacing={4} md={12}>
+                        {services.map((service, serviceNumber) => (
+                            <Grid item md={3} key={serviceNumber}>
+                                <StyledCard                  
+                                >
+                                    <Image
+                                        src={service.default}
+                                        width={70}
+                                        height={70}
+                                        alt={`service-${serviceNumber}`}
+                                        style={{
+                                            padding:  '12px',
+                                            backgroundColor: '#C10C55',
+                                            borderRadius: '50%',
+                                            marginTop: '-50px'
+                                        }}
+                                    />
+                                    <Info className="info">
 
-                        <Grid container spacing={1} md={7}>
-                            {services.map((service, serviceNumber) => (
-                                <Grid item md={6} key={serviceNumber}>
-                                    <StyledCard
-                                        onMouseEnter={() => handleMouseEnter(serviceNumber)}
-                                        onMouseLeave={handleMouseLeave}
-                                    >
-                                        <Image
-                                            src={hovered === serviceNumber ? service.hover : service.default}
-                                            width={40}
-                                            height={40}
-                                            alt={`service-${serviceNumber}`}
-                                        />
-                                        <Info className="info">
-
-                                            <Typography 
-                                                variant="body1"
-                                                sx={{
-                                                    fontFamily: 'Josefin Sans'
-                                                }}
-                                                fontSize={14}
-                                                lineHeight={1}
-                                            >
-                                                {service.description}
-                                            </Typography>
-                                        </Info>
-                                    </StyledCard>
-                                </Grid>
-                            ))}
-                        </Grid>
+                                        <Typography 
+                                            variant="body1"
+                                            sx={{
+                                                fontFamily: 'Playfair Display',
+                                                mb: 2
+                                            }}
+                                            fontSize={16}
+                                            lineHeight={1}
+                                            fontWeight='700'
+                                        >
+                                            {service.title}
+                                        </Typography>
+                                        <Typography 
+                                            variant="body1"
+                                            sx={{
+                                                fontFamily: 'Josefin Sans'
+                                            }}
+                                            fontSize={13}
+                                            lineHeight={1.2}
+                                            fontWeight='400'
+                                        >
+                                            {service.description}
+                                        </Typography>
+                                    </Info>
+                                </StyledCard>
+                            </Grid>
+                        ))}
                     </Grid>
+                    
+
+                    <StyledButton>
+                        Agende!
+                    </StyledButton>
                 </Container>
 
                 {/* Componente Image com animação, ativada quando a seção está visível */}

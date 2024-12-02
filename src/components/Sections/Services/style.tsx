@@ -2,15 +2,18 @@
 import styled from "styled-components";
 
 export const StyledCard = styled.div`
-    border: 1px solid #E12773;
-    
-    height: 200px;
+    border: 1px solid #C5C5C5;
+    overflow: visible;
+    height: 250px;
     border-radius: .3em;
     cursor: pointer;
     transition: all 200ms ease;
     padding: 20px;
     z-index: 10;
-
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &:hover {
         transform: scale(1.05);
         background-color: #E12773;
@@ -34,7 +37,7 @@ export const Info = styled.div`
     padding-left: 5px;
     border-top: 1px solid #E12773;
     padding-top: 20px;
-
+    width: 100%;
 
 
 `
@@ -42,17 +45,18 @@ export const Info = styled.div`
 
 
 export const StyledButton = styled.button`
-    width: 30%;
+    width: 10%;
     background-color: white;
     border-radius: .1em;
     border: 1px solid #E12773;
     color: #E12773;
     transition: all 200ms ease;
     padding: 12px;
-    margin: 0 auto;
+    margin: 50px auto;
     cursor: pointer;
     border-radius: 4px;
     font-family: 'Josefin Sans';
+    
 
 
     &:hover {

@@ -74,9 +74,33 @@ const Hero = () => {
                             </StyledButton>
                         </Grid>
                         <Grid item md={6} sx={{overflow: 'visible'}}>
-                            <PhotoDiv>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: -50, x: 1000 }}
+                                whileInView={{ 
+                                    opacity: 1, 
+                                    y: -50,
+                                    x: 500,
+                                    rotate: 0
+                                }} // Ativa a animação quando o elemento está em viewport
+                                viewport={{ once: false, amount: 0 }} // 
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                style={{
+                                    position: 'absolute',
+                                    bottom: '0',
+                                    left: '-10px',
+                                    borderRadius: '8px',
+                                    overflow: 'hidden',
+                                    
+                                    width: '50%'
+                                }}
+                            >
                                 
-                            </PhotoDiv>
+                                
+                                <PhotoDiv>
+                                    
+                                </PhotoDiv>
+                            </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, y: -20, x: 1000 }}
                                 whileInView={{ 

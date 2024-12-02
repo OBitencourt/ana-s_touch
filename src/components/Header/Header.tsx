@@ -6,31 +6,38 @@ import Image from "next/image"
 
 const Header = () => {
 
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <>
             <Container maxWidth='lg' >
 
                 <StyledHeader>
-                     <Image 
+                    <Image 
                         alt="logo"
                         width={70}
                         height={40}
                         src='/images/logo-icon.png'
                     />
                     <StyledNavbar>
-                        <StyledButton>
+                        <StyledButton onClick={() => scrollToSection("hero")}>
                             Ínicio
                         </StyledButton>
-                        <StyledButton>
+                        <StyledButton onClick={() => scrollToSection("about")}>
                             Sobre Mim
                         </StyledButton>
-                        <StyledButton>
+                        <StyledButton onClick={() => scrollToSection("services")}>
                             Serviços
                         </StyledButton>
-                        <StyledButton>
+                        <StyledButton onClick={() => scrollToSection("gallery")}>
                             Galerias
                         </StyledButton>
-                        <StyledButton>
+                        <StyledButton onClick={() => scrollToSection("contact")}>
                             Contatos
                         </StyledButton>
                         

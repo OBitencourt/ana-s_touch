@@ -56,73 +56,76 @@ const Gallery = () => {
     return (
 
         <>
-            <StyledPinkSection>
-                <Container
-                    maxWidth='lg'
-                    
-                >
-                    <Typography
-                        sx={{
-                            fontFamily: 'Playfair Display',
-                            color: 'white',
-                            mb: 10
-                        }}
-                        fontSize={60}
-                        align="center"
-                    >
-                        Galeria de Fotos
-                    </Typography>
+            <section id="gallery">
 
-                    <Carousel 
-                        arrows={false} 
-                        customButtonGroup={<ButtonGroup />}
-                        responsive={responsive}
-                        swipeable={true}
-                        infinite={true}
-                        autoPlay={true}
-                        autoPlaySpeed={5000}
+                <StyledPinkSection>
+                    <Container
+                        maxWidth='lg'
                         
                     >
-                        <Card>
+                        <Typography
+                            sx={{
+                                fontFamily: 'Playfair Display',
+                                color: 'white',
+                                mb: 10
+                            }}
+                            fontSize={60}
+                            align="center"
+                        >
+                            Galeria de Fotos
+                        </Typography>
 
-                            <Image 
-                                src='https://picsum.photos/1000/1000'
-                                alt="photo"
-                                height={220}
-                                width={390}
-                                style={{borderRadius: '2px'}}
-                            />
-                        </Card>
-                        <Card>
-                            <Image 
-                                src='https://picsum.photos/1000/1000'
-                                alt="photo"
-                                height={220}
-                                width={390}
-                                style={{borderRadius: '2px'}}
-                            />
-                        </Card>
-                        <Card>
-                            <Image 
-                                src='https://picsum.photos/1000/1000'
-                                alt="photo"
-                                height={220}
-                                width={390}
-                                style={{borderRadius: '2px'}}
-                            />
-                        </Card>
-                        <Card>
-                            <Image 
-                                src='https://picsum.photos/1000/1000'
-                                alt="photo"
-                                height={220}
-                                width={390}
-                                style={{borderRadius: '2px'}}
-                            />
-                        </Card>
-                    </Carousel>;
-                </Container>
-            </StyledPinkSection>
+                        <Carousel 
+                            arrows={false} 
+                            customButtonGroup={<ButtonGroup />}
+                            responsive={responsive}
+                            swipeable={true}
+                            infinite={true}
+                            autoPlay={true}
+                            autoPlaySpeed={5000}
+                            
+                        >
+                            <Card>
+
+                                <Image 
+                                    src='https://picsum.photos/1000/1000'
+                                    alt="photo"
+                                    height={220}
+                                    width={390}
+                                    style={{borderRadius: '2px'}}
+                                />
+                            </Card>
+                            <Card>
+                                <Image 
+                                    src='https://picsum.photos/1000/1000'
+                                    alt="photo"
+                                    height={220}
+                                    width={390}
+                                    style={{borderRadius: '2px'}}
+                                />
+                            </Card>
+                            <Card>
+                                <Image 
+                                    src='https://picsum.photos/1000/1000'
+                                    alt="photo"
+                                    height={220}
+                                    width={390}
+                                    style={{borderRadius: '2px'}}
+                                />
+                            </Card>
+                            <Card>
+                                <Image 
+                                    src='https://picsum.photos/1000/1000'
+                                    alt="photo"
+                                    height={220}
+                                    width={390}
+                                    style={{borderRadius: '2px'}}
+                                />
+                            </Card>
+                        </Carousel>;
+                    </Container>
+                </StyledPinkSection>
+            </section>
         </>
     )
 }

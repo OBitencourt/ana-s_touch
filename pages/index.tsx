@@ -1,3 +1,4 @@
+import BackToHeroButton from "@/src/components/BackToTop"
 import About from "@/src/components/Sections/About/About"
 import Contact from "@/src/components/Sections/Contact"
 import Gallery from "@/src/components/Sections/Gallery"
@@ -14,7 +15,9 @@ const Index = () => {
             <About />
             <Services />
             <Gallery />
-            <Contact />
+            <Contact />   
+
+            <BackToHeroButton />
         </>
     )
 }

@@ -17,7 +17,11 @@ export const StyledNavbar = styled.nav`
     width: 50%;
     display: flex;
     justify-content: space-around;
-    
+
+    @media (max-width: 472px) {
+        display: none;
+    }
+
 `
 
 export const StyledButton = styled.button`
@@ -39,7 +43,6 @@ export const StyledButton = styled.button`
         background-color: white;
         color: #F52773;
     }
-    
 `
 
 export const LogoWrapper = styled.div`
@@ -49,4 +52,20 @@ export const LogoWrapper = styled.div`
     
     border-radius: 100%;
     
+`
+
+export const MobileMenuButton = styled.button`
+    border: none;
+    background: none;
+    position: absolute;
+    right: 0;
+
+
+
+    @media (min-width: 473px) {
+        display: none;
+    }
+    @media (max-width: 471px) {
+        display: block;
+    }
 `

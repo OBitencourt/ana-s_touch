@@ -1,7 +1,7 @@
 
 
 import { Container } from "@mui/material"
-import { StyledButton, StyledHeader, StyledNavbar } from "./style"
+import { MobileMenuButton, StyledButton, StyledHeader, StyledNavbar } from "./style"
 import Image from "next/image"
 
 const Header = () => {
@@ -42,6 +42,15 @@ const Header = () => {
                         </StyledButton>
                         
                     </StyledNavbar>
+
+                    <MobileMenuButton>
+                        <Image 
+                            alt="logo"
+                            width={35}
+                            height={35}
+                            src='/images/menu-button.svg'
+                        />
+                    </MobileMenuButton>
                 </StyledHeader>
             </Container>
             

@@ -54,12 +54,14 @@ export const LogoWrapper = styled.div`
     
 `
 
+
+// MOBILE NAV
 export const MobileMenuButton = styled.button`
+
     border: none;
     background: none;
     position: absolute;
     right: 0;
-
 
 
     @media (min-width: 473px) {
@@ -68,4 +70,56 @@ export const MobileMenuButton = styled.button`
     @media (max-width: 471px) {
         display: block;
     }
+`
+
+export const MobileNavDiv = styled.div<{ isOpen: boolean }>`
+    height: 120vh;
+    background-color: #E12773;
+    width: ${({ isOpen }) => (isOpen ? "81%" : "0")};
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    transition: all 200ms ease-in;
+    margin-left: ${({ isOpen }) => (isOpen ? "0" : "-80px")};
+    z-index: 10;
+`
+
+export const MobileButtonWrapper = styled.div`
+    width: 90%;
+    padding: 15px;
+    border-top: 1px solid white;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+
+
+export const StyledMobileButton = styled.button`
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 12px;
+    font-family: 'Josefin Sans';
+    border: none;
+    width: 80%;
+    border-radius: 4px;
+    margin-top: 8px;
+`
+export const CloseMenuButton = styled.button`
+    background: none;
+    background-color: white;
+    border-radius: 100%;
+    padding: 8px;
+    position: absolute;
+    border: none;
+    right: -50px;
+    background-color: #E12773;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `

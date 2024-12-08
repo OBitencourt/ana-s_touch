@@ -48,7 +48,7 @@ const Services = () => {
     
     return (
         <>
-            <section id="services">
+            <section id="services" >
 
                 <StyledWhiteSection style={{ position: 'relative' }}>
                     <Container
@@ -63,13 +63,13 @@ const Services = () => {
                     >
                         <Typography
                             variant="h2"
-                            fontSize={80}
+                            fontSize='3em'
                             align="center"
                             lineHeight={0.8}
                             letterSpacing={-2}
                             sx={{ fontFamily: 'Playfair Display', mb: 10, width: '50%' }}
                         >
-                            Meus <span style={{ color: 'rgba(222, 49, 99, 1)', fontSize: '90px' }}>Serviços</span>
+                            Meus <span style={{ color: 'rgba(222, 49, 99, 1)', fontSize: '0.9em' }}>Serviços</span>
                         </Typography>
                                 
                         
@@ -164,40 +164,7 @@ const Services = () => {
 
                     
                 </StyledWhiteSection>
-                <motion.div
-                    initial={{ 
-                        opacity: 0, 
-                        y: '1000px', 
-                        x: 20,
-                        rotate: -130
-                    }}
-                    whileInView={{ 
-                        opacity: 1, 
-                        y: '900px',
-                        x: 30,
-                        rotate: -100
-                    }} 
-                    viewport={{ once: false, amount: 0}} 
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    style={{
-                        position: 'absolute',
-                        top: '0',
-                        right: '-100px',
-                        borderRadius: '100px',
-                        zIndex: 0
-                    }}
-                >
-                    <Image
-                        width={300}
-                        height={300}
-                        src='/images/tools.png'
-                        alt="logo"
-                        style={{
-                            backgroundColor: 'transparent',
-                        }}
-                    />
-                        
-                </motion.div>
+                
             </section>
         </>
     );

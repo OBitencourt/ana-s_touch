@@ -63,7 +63,6 @@ export const MobileMenuButton = styled.button`
     position: absolute;
     right: 0;
 
-
     @media (min-width: 473px) {
         display: none;
     }
@@ -82,14 +81,14 @@ export const MobileNavDiv = styled.div<{ isOpen: boolean }>`
     flex-direction: column;
     align-items: center;
     padding: 12px;
-    transition: all 200ms ease-in;
-    margin-left: ${({ isOpen }) => (isOpen ? "0" : "-80px")};
+    transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin-left: ${({ isOpen }) => (isOpen ? "0" : "-100px")};
     z-index: 10;
 `
 
 export const MobileButtonWrapper = styled.div`
-    width: 90%;
-    padding: 15px;
+    width: 80%;
+    padding: 10px;
     border-top: 1px solid white;
     margin-top: 10px;
     display: flex;
@@ -102,13 +101,17 @@ export const MobileButtonWrapper = styled.div`
 export const StyledMobileButton = styled.button`
     background-color: white;
     color: black;
-    padding: 10px;
-    font-size: 12px;
-    font-family: 'Josefin Sans';
+    padding: 12px;
+    font-size: 14px;
+    font-family: 'Judson';
     border: none;
-    width: 80%;
+    width: 100%;
     border-radius: 4px;
-    margin-top: 8px;
+    margin-top: 12px;
+    color: #C10C55;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 `
 export const CloseMenuButton = styled.button`
     background: none;
@@ -122,4 +125,5 @@ export const CloseMenuButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
+
 `

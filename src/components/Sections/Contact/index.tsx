@@ -27,7 +27,7 @@ const Contact = () => {
 
     return (
         <>
-            <section id="contact">
+            <section id="contact" style={{ overflow: "hidden", position: "relative" }}>
 
                 <StyledWhiteSection>
                     <Container

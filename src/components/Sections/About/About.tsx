@@ -5,7 +5,7 @@ import { PhotoWrapper } from "./style";
 const About = () => {
   return (
     <>
-      <section id="about">
+      <section id="about" style={{ overflow: "hidden", position: "relative" }}>
 
         <StyledPinkSection>
           <Container maxWidth="lg" >
@@ -36,7 +36,7 @@ const About = () => {
               <Grid item md={5}>
                 <Typography
                   variant="h1"
-                  fontSize={35}
+                  fontSize='2.3em'
                   component="h2"
                   fontWeight={300}
                   sx={{
@@ -55,7 +55,7 @@ const About = () => {
                   variant="body1"
                   component="p"
                   fontWeight={300}
-                  fontSize={14}
+                  fontSize='0.9em'
                   sx={{
                     fontFamily: "Josefin Sans",
                     justifyContent: "center",

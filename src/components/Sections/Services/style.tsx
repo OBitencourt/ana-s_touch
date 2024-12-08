@@ -14,6 +14,7 @@ export const StyledCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 12px;
     &:hover {
         transform: scale(1.05);
         background-color: #E12773;
@@ -57,7 +58,9 @@ export const StyledButton = styled.button`
     border-radius: 4px;
     font-family: 'Josefin Sans';
     
-
+    @media (max-width: 715px) {
+        width: 25%;
+    }
 
     &:hover {
         transform: scale(1.07);

@@ -56,7 +56,7 @@ const Gallery = () => {
     return (
 
         <>
-            <section id="gallery">
+            <section id="gallery" style={{ overflow: "hidden", position: "relative" }}>
 
                 <StyledPinkSection>
                     <Container

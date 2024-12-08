@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-import { Container } from "@mui/material"
+import { Container, Typography } from "@mui/material"
 import { CloseMenuButton, MobileButtonWrapper, MobileMenuButton, MobileNavDiv, StyledButton, StyledHeader, StyledMobileButton, StyledNavbar } from "./style"
 import Image from "next/image"
 
@@ -15,7 +15,7 @@ const Header = () => {
         }
     };
 
-    const handleToggleMenu = action => {
+    const handleToggleMenu = (action: boolean) => {
         setIsOpen(action)
     }
 
@@ -87,30 +87,68 @@ const Header = () => {
                         scrollToSection("hero")
                         setIsOpen(false)
                     }}>
-                        Início
+
+                        <Image 
+                            alt="home-icon"
+                            width={20}
+                            height={20}
+                            src='/images/home-icon.svg'
+                            style={{marginRight: '12px'}}
+                        />
+                        
+                            Início
+                        
                     </StyledMobileButton>
                     <StyledMobileButton onClick={() => {
                         scrollToSection("about")
                         setIsOpen(false)
                     }}>
+                        <Image 
+                            alt="home-icon"
+                            width={20}
+                            height={20}
+                            src='/images/about-icon.svg'
+                            style={{marginRight: '12px'}}
+                        />
                         Sobre Mim
                     </StyledMobileButton>
                     <StyledMobileButton onClick={() => {
                         scrollToSection("services")
                         setIsOpen(false)
                     }}>
+                        <Image 
+                            alt="home-icon"
+                            width={20}
+                            height={20}
+                            src='/images/services-icon.svg'
+                            style={{marginRight: '12px'}}
+                        />
                         Serviços
                     </StyledMobileButton>
                     <StyledMobileButton onClick={() => {
                         scrollToSection("gallery")
                         setIsOpen(false)
                     }}>
+                        <Image 
+                            alt="home-icon"
+                            width={20}
+                            height={20}
+                            src='/images/gallery-icon.svg'
+                            style={{marginRight: '12px'}}
+                        />
                         Galeria
                     </StyledMobileButton>
                     <StyledMobileButton onClick={() => {
                         scrollToSection("contact")
                         setIsOpen(false)
                     }}>
+                        <Image 
+                            alt="home-icon"
+                            width={20}
+                            height={20}
+                            src='/images/contact-icon.svg'
+                            style={{marginRight: '12px'}}
+                        />
                         Contate
                     </StyledMobileButton>
                 </MobileButtonWrapper>

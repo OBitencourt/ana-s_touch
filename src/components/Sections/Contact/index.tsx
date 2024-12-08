@@ -32,7 +32,7 @@ const Contact = () => {
                 <StyledWhiteSection>
                     <Container
                         maxWidth='md'
-                        sx={{position: 'relative',}}
+                        sx={{position: 'relative', width: '70%'}}
                     >
                         <Typography
                             sx={{
@@ -234,7 +234,7 @@ const Contact = () => {
                                         />
 
                                         <FormButton type="submit" disabled={state.submitting}>
-                                            Contate!
+                                            Enviar
                                         </FormButton>
                                     </form>
                                 </ContactDiv>

@@ -49,7 +49,7 @@ export const Socials = styled.div`
     position: absolute;
     z-index: 10;
     top: 37%;
-    border: 8px solid #E12773;
+    border: 5px solid #E12773;
 `
 
 export const SocialCard = styled.div`
@@ -84,14 +84,10 @@ export const FormButton = styled.button`
 `
 
 export const PhotoDiv = styled.div`
-    
     height: 474px;
-    background-image: url('/images/contact-page-photo.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     border-top-left-radius: 14px;
     border-bottom-left-radius: 14px;
     position: relative; /* Necessário para o ::before funcionar */
-
+    background-color: #E12773;
     
 `;

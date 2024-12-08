@@ -17,7 +17,7 @@ export const HeroWrapper = styled.section`
 export const StyledButton = styled.button`
     width: 20%;
     background-color: #F52773;
-    border-radius: .1em;
+    border-radius: 4px;
     transition: all 300ms ease;
     margin: 32px auto;
     border: none;

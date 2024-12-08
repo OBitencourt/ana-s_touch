@@ -6,7 +6,7 @@ import Image from "next/image"
 
 const Header = () => {
 
-    const scrollToSection = (id) => {
+    const scrollToSection = (id: string) => {
         const section = document.getElementById(id);
         if (section) {
             section.scrollIntoView({ behavior: "smooth" });

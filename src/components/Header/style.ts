@@ -24,7 +24,7 @@ export const StyledButton = styled.button`
     font-family: 'Josefin Sans';
     color: #4A4A4A;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     font-size: 12px;
     background-color: transparent;
     transition: all 200ms ease-in;

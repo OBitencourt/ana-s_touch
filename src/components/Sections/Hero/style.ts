@@ -15,7 +15,7 @@ export const HeroWrapper = styled.section`
 
 
 export const StyledButton = styled.button`
-    width: 20%;
+    width: 22%;
     background-color: #F52773;
     border-radius: 4px;
     transition: all 300ms ease;
@@ -42,8 +42,9 @@ export const PhotoDiv = styled.div`
     background-size: cover;
     border-radius: 8px;
     position: relative; /* Necessário para o ::before funcionar */
-
-    
+    @media (max-width: 880px) {
+        display: none;
+    }
 `;
 
 
@@ -52,5 +53,7 @@ export const Quadrado = styled.div`
     height: 120px;
     position: absolute;
     background-color: blue;
-
+    @media (max-width: 880px) {
+        display: none;
+    }
 `;

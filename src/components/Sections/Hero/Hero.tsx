@@ -46,12 +46,12 @@ const Hero = () => {
                                     src='/images/text-logo.png'
                                     width={300}
                                     height={90}
-                                    alt="lily"
+                                    alt="logo"
                                     style={{marginTop: 20}}
                                 />
 
                                 <Typography
-                                    fontSize={30}
+                                    fontSize='1.8em'
                                     sx={{
                                         fontFamily: 'Playfair Display',
                                         mb: 4
@@ -75,7 +75,7 @@ const Hero = () => {
                                     
                                     color="#4A4A4A"
                                     variant="body1"
-                                    fontSize="12px"
+                                    fontSize="0.8em"
                                     
                                 >
                                     Com técnica, carinho e atenção, meu trabalho vai além da estética, proporcionando a você um momento de bem-estar e confiança. Cada atendimento é pensado para realçar sua beleza e refletir sua personalidade de forma única.

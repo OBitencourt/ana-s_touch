@@ -69,7 +69,7 @@ const Gallery = () => {
                                 color: 'white',
                                 mb: 10
                             }}
-                            fontSize={60}
+                            fontSize='2.6em'
                             align="center"
                         >
                             Galeria de Fotos
@@ -79,7 +79,6 @@ const Gallery = () => {
                             arrows={false} 
                             customButtonGroup={<ButtonGroup />}
                             responsive={responsive}
-                            swipeable={true}
                             infinite={true}
                             autoPlay={true}
                             autoPlaySpeed={5000}

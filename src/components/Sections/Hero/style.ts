@@ -49,10 +49,13 @@ export const PhotoDiv = styled.div`
 
 
 export const Quadrado = styled.div`
-    width: 100px;
-    height: 120px;
+    width: 200px;
+    height: 150px;
     position: absolute;
-    background-color: blue;
+    top: 400px;
+    right: 50px;
+    border-radius: 8px;
+    background-color: #E12773;
     @media (max-width: 880px) {
         display: none;
     }

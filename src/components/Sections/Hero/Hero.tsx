@@ -1,6 +1,6 @@
 import { Container, Grid, Typography } from "@mui/material"
 import Header from "../../Header/Header"
-import { HeroWrapper, PhotoDiv, StyledButton } from "./style"
+import { HeroWrapper, PhotoDiv, Quadrado, StyledButton } from "./style"
 import Image from "next/image"
 import { motion } from "framer-motion";
 
@@ -101,30 +101,11 @@ const Hero = () => {
                                         
                                     </PhotoDiv>
                                 </motion.div>
-                                <motion.div
-                                    initial={{ opacity: 0, y: -20, x: 800 }}
-                                    whileInView={{ 
-                                        opacity: 1, 
-                                        y: -20,
-                                        x: 800,
-                                        rotate: 0
-                                    }} // Ativa a animação quando o elemento está em viewport
-                                    viewport={{ once: false, amount: 0 }} // 
-                                    transition={{ duration: 0.8, ease: "easeOut" }}
-                                    style={{
-                                        position: 'absolute',
-                                        bottom: '0',
-                                        left: '-10px',
-                                        borderRadius: '8px',
-                                        overflow: 'hidden',
-                                        backgroundColor: '#E12773',
-                                        height: '170px',
-                                        width: '190px'
-                                    }}
-                                >
+                                
                                     
-                                    
-                                </motion.div>
+                                <Quadrado>
+
+                                </Quadrado>
                             </Grid>
                         </Grid>
                     </Container>

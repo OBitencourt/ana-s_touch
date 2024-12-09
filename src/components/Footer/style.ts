@@ -3,34 +3,35 @@ import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
     width: 100%;
-    background-color: white;
-    color: rgba(222, 49, 99, 1);
-    border-top: 1px solid rgba(222, 49, 99, 1);
-    padding: 20px;
+    background-color: #E12773;
+    padding: 0px 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 150px;
+    @media (max-width: 574px) {
+        justify-content: space-around;
+    }
 
 `
 
-export const StyledDivider = styled.div`
-    height: 95%;
-    width: 1px;
-    background-color: rgba(222, 49, 99, 1);
-    margin: 8px;
-`
-
-export const StyledCard = styled.div`
-    width: 30%;
-    height: 135px;
-    background-color: rgba(222, 49, 99, 1);
-    padding: 20px;
-    color: white;
-    font-size: 25px;
-`
-
-export const StyledDiv = styled.div`
+export const InfoWrapper = styled.div`
     display: flex;
-    align-items: center;
+    color: white;
+    gap: 100px;
+`
+
+export const InfoDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    
+    @media (max-width: 574px) {
+        font-size: 1em;
+    }
+`
+export const PhotoWrapper = styled.div`
+
+    @media (max-width: 713px) {
+        display: none;
+    }
 `

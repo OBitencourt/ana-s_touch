@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material"
-import { StyledCard, StyledDivider, StyledFooter, StyledDiv } from "./style"
+import {StyledFooter, InfoWrapper, InfoDiv, PhotoWrapper } from "./style"
 import Image from "next/image"
 
 const Footer = () => {
@@ -8,73 +8,52 @@ const Footer = () => {
 
         <>
             <StyledFooter>
-                <StyledCard>
-                    <Typography
-                        sx={{
-                            fontFamily: '"Rouge Script"'
-                        }}
-                        fontSize={25}
-                        align="center"
-                    >
-                        Localização
-                    </Typography>
+                <PhotoWrapper>
 
-                    <StyledDiv>
-
-                        <Image
-                            width={18}
-                            height={18}
-                            src='/images/location.svg'
-                            alt="insta"
-                            style={{
-                                marginRight: '10px'
-                            }}
-                            
-                        />
+                    <Image 
+                        src='/images/white-logo.png'
+                        width={120}
+                        height={80}
+                        alt="logo"
+                    />
+                </PhotoWrapper>
+                
+                <InfoWrapper>
+                    <InfoDiv>
                         <Typography
-                            sx={{
-                                fontFamily: 'Josefin Sans'
-                            }}
-                            fontSize={15}
+                            fontSize='1em'
+                            sx={{fontFamily: 'Playfair Display'}}
                         >
-                            Amorosa - Viana do Castelo
+                            Horários:
                         </Typography>
-                    </StyledDiv>
-                </StyledCard>
-                <StyledDivider />
-                <StyledCard>
-                    <Typography
-                        sx={{
-                            fontFamily: '"Rouge Script"'
-                        }}
-                        fontSize={25}
-                        align="center"
-
-                    >
-                        Social
-                    </Typography>
-
-                    <StyledDiv >
-
-                        <Image
-                            width={25}
-                            height={25}
-                            src='/images/instagram.svg'
-                            alt="insta"
-                            style={{
-                                marginRight: '10px'
-                            }}
-                        />
                         <Typography
-                            sx={{
-                                fontFamily: 'Josefin Sans'
-                            }}
-                            fontSize={15}
+                            fontSize='0.9em'
+                            sx={{fontFamily: 'Playfair Display'}}
                         >
-                            www.instagram.com
+                            - seg-sex: 19:00 - 20:30
                         </Typography>
-                    </StyledDiv>
-                </StyledCard>
+                        <Typography
+                            fontSize='0.9em'
+                            sx={{fontFamily: 'Playfair Display'}}
+                        >
+                            - sab-dom: 9:00 - 11:30
+                        </Typography>
+                    </InfoDiv>
+                    <InfoDiv>
+                        <Typography
+                            fontSize='1em'
+                            sx={{fontFamily: 'Playfair Display'}}
+                        >
+                            Localização:
+                        </Typography>
+                        <Typography
+                            fontSize='0.9em'
+                            sx={{fontFamily: 'Playfair Display'}}
+                        >
+                            - Amorosa, Viana do Castelo
+                        </Typography>
+                    </InfoDiv>
+                </InfoWrapper>
             </StyledFooter>
         </>
     )

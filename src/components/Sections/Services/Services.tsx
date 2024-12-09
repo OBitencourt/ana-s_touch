@@ -26,24 +26,24 @@ const Services = () => {
     const services: Service[] = [
         { 
           default: '/images/nail-gelinho.svg', 
-          title: 'Gelinho',
+          title: 'Verniz de Gel',
           description: 'O gelinho é ideal para quem busca unhas naturais e delicadas, oferecendo resistência extra e um acabamento perfeito.'
         },
         { 
           default: '/images/nail-fibra.svg',
-          title: 'Unha em fibra',
+          title: 'Alongamento em fibra',
           description: 'Unhas em fibra são sinônimo de durabilidade e elegância, garantindo um alongamento natural e resistente para o dia a dia.'
         },
         { 
           default: '/images/nail-gel.svg',
-          title: 'Unha em gel',
+          title: 'Alongamento em gel',
           description: 'As unhas em gel proporcionam um visual impecável, com brilho intenso e longa duração, perfeitas para quem busca praticidade e beleza.'
         },
-        { 
+        /*{ 
           default: '/images/nail-art.png',
           title: 'Nail Art',
           description: 'A nail art transforma suas unhas em verdadeiras obras de arte, permitindo criar designs únicos que refletem sua personalidade.'
-        },
+        },*/
       ];
     
     return (
@@ -77,7 +77,7 @@ const Services = () => {
                             
                             
 
-                        <Grid container spacing={4} md={12}>
+                        <Grid container spacing={4} md={12} sx={{display: 'flex', justifyContent: 'center'}}>
                             {services.map((service, serviceNumber) => (
                                 <Grid item md={3} key={serviceNumber}>
                                     <StyledCard                  

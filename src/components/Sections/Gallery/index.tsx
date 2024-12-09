@@ -87,7 +87,7 @@ const Gallery = () => {
                             <Card>
 
                                 <Image 
-                                    src='https://picsum.photos/1000/1000'
+                                    src='https://picsum.photos/997/997'
                                     alt="photo"
                                     height={220}
                                     width={390}
@@ -96,7 +96,7 @@ const Gallery = () => {
                             </Card>
                             <Card>
                                 <Image 
-                                    src='https://picsum.photos/1000/1000'
+                                    src='https://picsum.photos/997/997'
                                     alt="photo"
                                     height={220}
                                     width={390}
@@ -105,7 +105,7 @@ const Gallery = () => {
                             </Card>
                             <Card>
                                 <Image 
-                                    src='https://picsum.photos/1000/1000'
+                                    src='https://picsum.photos/997/997'
                                     alt="photo"
                                     height={220}
                                     width={390}
@@ -114,7 +114,7 @@ const Gallery = () => {
                             </Card>
                             <Card>
                                 <Image 
-                                    src='https://picsum.photos/1000/1000'
+                                    src='https://picsum.photos/997/997'
                                     alt="photo"
                                     height={220}
                                     width={390}

@@ -14,7 +14,7 @@ export const StyledCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     &:hover {
         transform: scale(1.05);
         background-color: #E12773;

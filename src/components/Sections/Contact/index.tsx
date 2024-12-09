@@ -40,10 +40,10 @@ const Contact = () => {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
-                                mb: 5
+                                mb: 5,
                             }}
                             color="#E12773"
-                            fontSize={60}
+                            fontSize='2.6em'
                             align="center"
                         >
                             Contate
@@ -145,7 +145,11 @@ const Contact = () => {
                         
                         <Grid sx={{display: 'flex', justifyContent: 'center'}} container spacing={0} >
 
-                            <Grid item md={5}>
+                            <Grid item md={5} sx={{
+                                '@media (max-width: 900px)': {  // Para telas pequenas (mobile)
+                                    display: 'none'
+                                },
+                            }}>
                                 
                                 <PhotoDiv>
 
@@ -153,7 +157,7 @@ const Contact = () => {
                                 
                             </Grid>
 
-                            <Grid item md={6}>
+                            <Grid item md={6} sm={12}>
 
                                 <ContactDiv>
                                     

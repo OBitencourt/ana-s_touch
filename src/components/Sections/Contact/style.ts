@@ -6,6 +6,16 @@ export const ContactDiv = styled.div`
     border-bottom-right-radius: 14px;
 
     padding: 20px;
+
+    @media (max-width: 813px) {
+        margin-left: 200px;
+    }
+
+    @media (max-width: 627px) {
+        margin-left: -20px;
+        border-radius: 12px;
+        width: 120%;
+    }
 `
 
 export const StyledInput = styled.input`
@@ -50,6 +60,14 @@ export const Socials = styled.div`
     z-index: 10;
     top: 37%;
     border: 5px solid #E12773;
+
+    @media (max-width: 813px) {
+        left: -50px;
+    }
+
+    @media (max-width: 627px) {
+        display: none;
+    }
 `
 
 export const SocialCard = styled.div`

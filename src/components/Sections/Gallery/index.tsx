@@ -26,27 +26,40 @@ const responsive = {
     }
 };
 
-const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
-    const { carouselState: { currentSlide } } = rest;
+
+interface ButtonGroupProps {
+  next: () => void;
+  previous: () => void;
+  goToSlide?: (index: number) => void; // Opcional, dependendo do uso
+  carouselState: {
+    currentSlide: number;
+    totalItems: number;
+    slidesToShow: number;
+    deviceType: string;
+  };
+}
+
+
+const ButtonGroup: React.FC<ButtonGroupProps> = ({ next, previous, carouselState }) => {
+    const { currentSlide } = carouselState;
+  
     return (
-      <div style={{position: 'absolute', display: 'flex', justifyContent: 'space-between', width: '100%', padding: '20px'}} className="carousel-button-group"> 
-        <StyledArrow className={currentSlide === 0 ? 'disable' : ''} onClick={() => previous()}>
-            <Image 
-                src='/images/left-arrow.svg'
-                height={20}
-                width={20}
-                alt="left_arrow"
-            />
+      <div
+        style={{
+          position: "absolute",
+          display: "flex",
+          justifyContent: "space-between",
+          width: "100%",
+          padding: "20px",
+        }}
+        className="carousel-button-group"
+      >
+        <StyledArrow className={currentSlide === 0 ? "disable" : ""} onClick={previous}>
+          <Image src="/images/left-arrow.svg" height={20} width={20} alt="left_arrow" />
         </StyledArrow>
-        <StyledArrow onClick={() => next()}>
-            <Image 
-                src='/images/right-arrow.svg'
-                height={20}
-                width={20}
-                alt="left_arrow"
-            />
+        <StyledArrow onClick={next}>
+          <Image src="/images/right-arrow.svg" height={20} width={20} alt="left_arrow" />
         </StyledArrow>
-        
       </div>
     );
   };

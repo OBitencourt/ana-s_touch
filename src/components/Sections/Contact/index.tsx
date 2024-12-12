@@ -104,7 +104,7 @@ const Contact = () => {
                                             color="#8C5A75"
                                             fontSize={12}
                                         >
-                                            @ana'stouch
+                                            @anastouch
                                         </Typography>
                                     </div>
                                 </SocialInfo>

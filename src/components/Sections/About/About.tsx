@@ -67,7 +67,7 @@ const About = () => {
                   <br /><br />
                   Acredito que as mãos falam muito sobre uma pessoa, e cuidar delas vai além da estética. É um momento de autocuidado, que merece atenção e carinho. Por isso, me dedico a oferecer um trabalho delicado e personalizado, refletindo o estilo de cada cliente.
                   <br /><br />
-                  Meu compromisso é unir técnica, criatividade e produtos de qualidade, em um ambiente acolhedor, para garantir uma experiência especial. Amo o que faço e estou sempre em busca de aprimorar minhas habilidades para oferecer o melhor aos meus clientes.
+                  Meu compromisso é unir técnica, criatividade e produtos de qualidade, para garantir uma experiência especial. Amo o que faço e estou sempre em busca de aprimorar minhas habilidades para oferecer o melhor aos meus clientes.
                 </Typography>
               </Grid>
             </Grid>

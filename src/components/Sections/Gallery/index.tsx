@@ -25,23 +25,23 @@ const responsive = {
   },
 };
 
-interface ButtonGroupProps {
-  next: () => void;
-  previous: () => void;
-  carouselState: {
+interface CustomButtonGroupProps {
+  next?: () => void;
+  previous?: () => void;
+  carouselState?: {
     currentSlide: number;
     totalItems: number;
     slidesToShow: number;
-    deviceType: string;
+    deviceType?: string;
   };
 }
 
-const ButtonGroup: React.FC<ButtonGroupProps> = ({
+const ButtonGroup: React.FC<CustomButtonGroupProps> = ({
   next,
   previous,
   carouselState,
 }) => {
-  const { currentSlide } = carouselState;
+  const currentSlide = carouselState?.currentSlide ?? 0;
   return (
     <div
       style={{
@@ -49,7 +49,7 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({
         display: "flex",
         justifyContent: "space-between",
         width: "91%",
-        top: '56%'
+        top: "56%",
       }}
       className="carousel-button-group"
     >
@@ -74,6 +74,10 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({
       </StyledArrow>
     </div>
   );
+};
+
+const ButtonGroupWrapper: React.FC<CustomButtonGroupProps> = (props) => {
+  return <ButtonGroup {...props} />;
 };
 
 const Gallery = () => {
@@ -118,11 +122,6 @@ const Gallery = () => {
       </StyledPinkSection>
     </section>
   );
-};
-
-// Wrapper para injetar os props necessários no ButtonGroup
-const ButtonGroupWrapper = (props: any) => {
-  return <ButtonGroup {...props} />;
 };
 
 export default Gallery;
